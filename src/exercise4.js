@@ -1,6 +1,6 @@
 
 const countSequence = (sequence, input) => {
-  if (input) {
+  if (input !== undefined) {
     return countSeq(sequence, input);
   } else {
     return (input) => {
@@ -10,8 +10,6 @@ const countSequence = (sequence, input) => {
 };
 
 const countSeq = (sequence, input) => {
-  console.log(sequence.length);
-  console.log(input.length);
   if (!sequence || !input || sequence.length === 0 || input.length === 0) {
     return 0;
   } else {
